@@ -1,0 +1,13 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+{% if latest_projects %}
+<ul id="projects">
+    {% for project in latest_projects %}
+    <li><a href="/contacts/{{ project.id }}/">{{ project.name }}</a></li>
+    {% endfor %}
+</ul>
+{% else %}
+<p>No projects available.</p>
+{% endif %}
+{% endblock %}
