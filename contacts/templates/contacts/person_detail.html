@@ -1,0 +1,20 @@
+{% extends 'layout.html' %}
+{% block content %}
+
+<h1>{{ object }}</h1>
+<p>{{ object.comment }}</p>
+
+<dl>
+    <dt>e-mail:</dt>
+    <dd><a href="mailto:{{ object.email }}">{{ object.email }}</a></dd>
+    <dt>mobil:</dt>
+    <dd>{{ object.mobil }}</dd>
+    <dt>phone:</dt>
+    <dd>{{ object.phone }}</dd>
+    <dt>web:</dt>
+    <dd>{{ object.web }}</dd>
+    <dt>ico:</dt>
+    <dd>{{ object.ico }}</dd>
+</dl>
+
+{% endblock %}

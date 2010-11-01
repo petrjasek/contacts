@@ -1,0 +1,22 @@
+{% extends 'layout.html' %}
+{% block content %}
+
+<h1>{{ object }}</h1>
+<p class="date">{{ object.created }}</p>
+<p>{{ object.description }}</p>
+
+<h2>Firmy</h2>
+<ul>
+    {% for company in object.companies.all %}
+    <li><a href="/contacts/company/{{ company.id }}/">{{ company }}</a></li>
+    {% endfor %}
+</ul>
+
+<h2>Osoby</h2>
+<ul>
+    {% for person in object.persons.all %}
+    <li><a href="/contacts/person/{{ person.id }}/">{{ person }}</a></li>
+    {% endfor %}
+</ul>
+
+{% endblock %}

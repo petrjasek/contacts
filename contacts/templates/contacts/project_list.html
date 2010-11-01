@@ -1,13 +1,14 @@
 {% extends 'layout.html' %}
-
 {% block content %}
-{% if latest_projects %}
+
+{% if object_list %}
 <ul id="projects">
-    {% for project in latest_projects %}
+    {% for project in object_list %}
     <li><a href="/contacts/{{ project.id }}/">{{ project.name }}</a></li>
     {% endfor %}
 </ul>
 {% else %}
 <p>No projects available.</p>
 {% endif %}
+
 {% endblock %}
